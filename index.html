@@ -9,14 +9,15 @@
 
     body {
       margin: 0;
-      padding: 0;
+      padding: 30px 0;
       min-height: 100vh;
       background: linear-gradient(135deg, #ffe4f3 0%, #f8d7ff 45%, #e0c3ff 100%);
-      overflow: auto;
+      overflow-x: hidden;
+      overflow-y: auto;
       font-family: 'Poppins', sans-serif;
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
       position: relative;
     }
 
@@ -56,7 +57,6 @@
     .card {
       width: 440px;
       max-width: 96vw;
-      max-height: 92vh;
       background: white;
       border-radius: 32px;
       box-shadow: 0 25px 70px rgba(255, 105, 180, 0.35);
@@ -96,30 +96,6 @@
     .profile-photo:hover {
       transform: translateY(-4px);
       box-shadow: 0 0 30px rgba(255, 105, 180, 0.65), 0 0 55px rgba(255, 182, 193, 0.45);
-    }
-
-    .message::-webkit-scrollbar {
-      width: 8px;
-    }
-
-    .message::-webkit-scrollbar-track {
-      background: rgba(255, 182, 193, 0.1);
-      border-radius: 10px;
-    }
-
-    .message::-webkit-scrollbar-thumb {
-      background: linear-gradient(135deg, #ff69b4, #ff1493);
-      border-radius: 10px;
-      border: 1px solid rgba(255, 255, 255, 0.3);
-    }
-
-    .message::-webkit-scrollbar-thumb:hover {
-      background: linear-gradient(135deg, #ff1493, #dc143c);
-    }
-
-    .message {
-      scrollbar-width: thin;
-      scrollbar-color: #ff69b4 rgba(255, 182, 193, 0.2);
     }
 
     .bouquet {
@@ -192,17 +168,15 @@
       margin: 12px 0 8px;
       border-left: 6px solid #c026d3;
       word-break: break-word;
-      overflow-y: scroll;
-      max-height: 400px;
-      scrollbar-width: thin;
-      scrollbar-color: #ff69b4 rgba(255, 182, 193, 0.2);
-      padding-right: 18px;
+      overflow-y: auto;
+      max-height: 280px;
+      padding-right: 16px;
     }
 
     .scroll-tip {
       font-size: 12px;
       color: #9d174d;
-      margin-bottom: 16px;
+      margin: 0 0 16px;
       opacity: 0.9;
     }
 
@@ -211,6 +185,20 @@
       font-size: 29px;
       color: #c026d3;
       margin-top: 8px;
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        width: min(92vw, 420px);
+        padding: 20px 16px 24px;
+      }
+      .message {
+        max-height: 260px;
+        padding: 18px 20px;
+      }
+      .signature {
+        font-size: 26px;
+      }
     }
 
     @keyframes gentleFloat {
