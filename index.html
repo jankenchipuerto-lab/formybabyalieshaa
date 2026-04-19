@@ -12,7 +12,7 @@
       padding: 0;
       min-height: 100vh;
       background: linear-gradient(135deg, #ffe4f3 0%, #f8d7ff 45%, #e0c3ff 100%);
-      overflow: hidden;
+      overflow: auto;
       font-family: 'Poppins', sans-serif;
       display: flex;
       justify-content: center;
@@ -56,6 +56,7 @@
     .card {
       width: 440px;
       max-width: 96vw;
+      max-height: 92vh;
       background: white;
       border-radius: 32px;
       box-shadow: 0 25px 70px rgba(255, 105, 180, 0.35);
@@ -114,6 +115,11 @@
 
     .message::-webkit-scrollbar-thumb:hover {
       background: linear-gradient(135deg, #ff1493, #dc143c);
+    }
+
+    .message {
+      scrollbar-width: thin;
+      scrollbar-color: #ff69b4 rgba(255, 182, 193, 0.2);
     }
 
     .bouquet {
@@ -183,11 +189,21 @@
       padding: 20px 24px;
       background: #fdf4ff;
       border-radius: 22px;
-      margin: 12px 0 18px;
+      margin: 12px 0 8px;
       border-left: 6px solid #c026d3;
       word-break: break-word;
-      overflow-y: auto;
-      max-height: 320px;
+      overflow-y: scroll;
+      max-height: 400px;
+      scrollbar-width: thin;
+      scrollbar-color: #ff69b4 rgba(255, 182, 193, 0.2);
+      padding-right: 18px;
+    }
+
+    .scroll-tip {
+      font-size: 12px;
+      color: #9d174d;
+      margin-bottom: 16px;
+      opacity: 0.9;
     }
 
     .signature {
@@ -262,6 +278,8 @@
        natin ng sobra ang isat isa kahit na minsan may tampuhan ememwehehe<br><br>
       <strong>I LOVE YOUUUUUU SOO MUCHH MY BABY LOVEE LOVEE!</strong>
     </div>
+
+    <div class="scroll-tip">Scroll to read the full message</div>
 
     <div class="signature">From, your bebi kenn ❤️</div>
   </div>
